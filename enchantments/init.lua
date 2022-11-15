@@ -179,7 +179,6 @@
         Angle is counter-clockwise from the +x direction.
     set_look_pitch(radians): sets look pitch - Deprecated. Use set_look_vertical.
     set_look_yaw(radians): sets look yaw - Deprecated. Use set_look_horizontal.
-{
     get_breath(): returns players breath
     set_breath(value): sets players breath
         values:
@@ -187,8 +186,6 @@
             max: bubbles bar is not shown
             See [Object properties] for more information
         Is limited to range 0 ... 65535 (2^16 - 1)
-}
-{
     set_fov(fov, is_multiplier, transition_time): Sets player s FOV
         fov: FOV value.
         is_multiplier: Set to true if the FOV value is a multiplier. Defaults to false.
@@ -198,9 +195,7 @@
         Server-sent FOV value. Returns 0 if an FOV override doesn t exist.
         Boolean indicating whether the FOV value is a multiplier.
         Time (in seconds) taken for the FOV transition. Set by set_fov.
-}
     get_meta(): Returns a PlayerMetaRef.
-{
     set_inventory_formspec(formspec)
         Redefine player s inventory form
         Should usually be called in on_joinplayer
@@ -211,7 +206,6 @@
         This should be used to set style elements such as background[] and bgcolor[], any non-style elements (eg: label) may result in weird behavior.
         Only affects formspecs shown after this is called.
     get_formspec_prepend(formspec): returns a formspec string.
-}
     get_player_control(): returns table with player pressed keys
         The table consists of fields with the following boolean values representing the pressed keys: up, down, left, right, jump, aux1, sneak, dig, place, LMB, RMB, and zoom.
         The fields LMB and RMB are equal to dig and place respectively, and exist only to preserve backwards compatibility.
@@ -229,8 +223,6 @@
             8 - place
             9 - zoom
         Returns 0 (no bits set) if the object is not a player.
-
-{
     hud_add(hud definition): add a HUD element described by HUD def, returns ID number on success
     hud_remove(id): remove the HUD element of the specified id
     hud_change(id, stat, value): change a value of a previously added HUD element.
@@ -258,7 +250,6 @@
     hud_set_hotbar_selected_image(texturename)
         sets image for selected item of hotbar
     hud_get_hotbar_selected_image: returns texturename
-}
     set_minimap_modes({mode, mode, ...}, selected_mode)
         Overrides the available minimap modes (and toggle order), and changes the selected mode.
         mode is a table consisting of up to four fields:
